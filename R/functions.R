@@ -65,9 +65,9 @@
 #' further arguments passed to \code{\link[glmnet]{glmnet}}
 #' 
 #' @references 
-#' A Rauschenberger, E Glaab, and MA van de Wiel (2020).
+#' A Rauschenberger, E Glaab, and MA van de Wiel (2021).
 #' "Predictive and interpretable models via the stacked elastic net".
-#' \emph{Bioinformatics}. In press.
+#' \emph{Bioinformatics}. 37(14):2012-2016.
 #' \doi{10.1093/bioinformatics/btaa535}.
 #' \email{armin.rauschenberger@uni.lu}
 #' 
@@ -664,6 +664,7 @@ cv.starnet <- function(y,X,family="gaussian",nalpha=21,alpha=NULL,nfolds.ext=10,
 }
 
 #' @name .simulate
+#' 
 #' @title
 #' Simulation
 #'

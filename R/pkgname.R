@@ -3,6 +3,8 @@
 #' @keywords documentation
 #' @docType package
 #' 
+#' @aliases starnet-package
+#' 
 #' @title
 #' Stacked Elastic Net Regression
 #' 
@@ -22,12 +24,12 @@
 #' to open the vignette.
 #' 
 #' @references
-#' A Rauschenberger, E Glaab, and MA van de Wiel (2020).
+#' A Rauschenberger, E Glaab, and MA van de Wiel (2021).
 #' "Predictive and interpretable models via the stacked elastic net".
-#' \emph{Bioinformatics}. In press.
+#' \emph{Bioinformatics}. 37(14):2012-2016.
 #' \doi{10.1093/bioinformatics/btaa535}.
 #' \email{armin.rauschenberger@uni.lu}
-#'
+#' 
 #' @examples
 #' \dontshow{
 #' if(!grepl('SunOS',Sys.info()['sysname'])){
@@ -72,12 +74,12 @@
 #' #--- extract coefficients ---
 #' coef <- coef(object)
 #' # scalar "alpha": intercept
-#' # vector "beta": slopes}}
+#' # vector "beta": slopes
 #' 
 #' #--- model comparison ---
 #' loss <- cv.starnet(y=y,X=X)
 #' # cross-validated loss for different alpha,
-#' # and for tuning and stacking}
+#' # and for tuning and stacking}}
 #' 
-NULL
+"_PACKAGE"
 

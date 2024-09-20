@@ -1,12 +1,10 @@
 
-<!-- Modify xxx.Rmd, not xxx.md! -->
-
-[![Travis-CI Build
-Status](https://travis-ci.org/rauschenberger/starnet.svg)](https://travis-ci.org/rauschenberger/starnet)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/rauschenberger/starnet?svg=true)](https://ci.appveyor.com/project/rauschenberger/starnet)
 [![Coverage
-Status](https://codecov.io/github/rauschenberger/starnet/coverage.svg?branch=master)](https://codecov.io/github/rauschenberger/starnet)
+Status](https://codecov.io/github/rauschenberger/starnet/coverage.svg?branch=master)](https://app.codecov.io/github/rauschenberger/starnet)
+
+
 
 ## Scope
 
@@ -32,10 +30,10 @@ devtools::install_github("rauschenberger/starnet")
 
 ## Reference
 
-A Rauschenberger, E Glaab, MA van de Wiel (2020). “Predictive and
-interpretable models via the stacked elastic net”. *Bioinformatics*,
-btaa535.
-[doi: 10.1093/bioinformatics/btaa535](https://doi.org/10.1093/bioinformatics/btaa535).
+A Rauschenberger, E Glaab, MA van de Wiel (2021). “Predictive and
+interpretable models via the stacked elastic net”. *Bioinformatics*
+37(14):2012-2016. [doi:
+10.1093/bioinformatics/btaa535](https://doi.org/10.1093/bioinformatics/btaa535).
 
 [![CRAN
 version](https://www.r-pkg.org/badges/version/starnet)](https://CRAN.R-project.org/package=starnet)

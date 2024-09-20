@@ -14,6 +14,30 @@
 
 <title>Stacked Elastic Net</title>
 
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
 
 
 
@@ -215,14 +239,18 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 
-<p>Click <a href="https://academic.oup.com/bioinformatics/advance-article-pdf/doi/10.1093/bioinformatics/btaa535/33263777/btaa535.pdf">here</a> to download article.</p>
+<p>Click <a href="https://academic.oup.com/bioinformatics/pdf-lookup/doi/10.1093/bioinformatics/btaa535">here</a>
+to download article.</p>
 <div>
-<object data="https://academic.oup.com/bioinformatics/advance-article-pdf/doi/10.1093/bioinformatics/btaa535/33263777/btaa535.pdf" type="application/pdf" width="100%" height="500px">
+<object data="https://academic.oup.com/bioinformatics/pdf-lookup/doi/10.1093/bioinformatics/btaa535" type="application/pdf" width="100%" height="500px">
 </object>
 </div>
 <div id="reference" class="section level2">
 <h2>Reference</h2>
-<p>A Rauschenberger, E Glaab, and MA van de Wiel (2020). “Predictive and interpretable models via the stacked elastic net”. <em>Bioinformatics.</em> <a href="https://doi.org/10.1093/bioinformatics/btaa535">doi: 10.1093/bioinformatics/btaa535</a></p>
+<p>A Rauschenberger, E Glaab, and MA van de Wiel (2021). “Predictive and
+interpretable models via the stacked elastic net”.
+<em>Bioinformatics.</em> 37(14):2012-2016 <a href="https://doi.org/10.1093/bioinformatics/btaa535">doi:
+10.1093/bioinformatics/btaa535</a></p>
 </div>
 
 
