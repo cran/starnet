@@ -5,6 +5,6 @@ knitr::opts_chunk$set(echo = TRUE)
 #  install.packages("starnet")
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  #install.packages("devtools")
-#  devtools::install_github("rauschenberger/starnet")
+#  #install.packages("remotes")
+#  remotes::install_github("rauschenberger/starnet")
 

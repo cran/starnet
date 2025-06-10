@@ -49,7 +49,7 @@ overflow: visible;
 </style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -60,7 +60,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
 { counter-reset: source-line 0; }
@@ -345,12 +345,12 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <p>Install the current release from <a href="https://CRAN.R-project.org/package=starnet">CRAN</a>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;starnet&quot;</span>)</span></code></pre></div>
 <p>or the latest development version from <a href="https://github.com/rauschenberger/starnet">GitHub</a>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co">#install.packages(&quot;devtools&quot;)</span></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;rauschenberger/starnet&quot;</span>)</span></code></pre></div>
-<p>A Rauschenberger, E Glaab, and MA van de Wiel (2021). “Predictive and
-interpretable models via the stacked elastic net”.
-<em>Bioinformatics.</em> 37(14):2012-2016 <a href="https://doi.org/10.1093/bioinformatics/btaa535">doi:
-10.1093/bioinformatics/btaa535</a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co">#install.packages(&quot;remotes&quot;)</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;rauschenberger/starnet&quot;</span>)</span></code></pre></div>
+<p>Armin Rauschenberger <a href="https://orcid.org/0000-0001-6498-4801"><img role="img" aria-label="AR" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAALVBMVEUAAACmzjmmzjmmzjmmzjmmzjn////0+ebj8MHe7bXT55y82mus0UWmzjmSwCmNJ4LqAAAABnRSTlMAIGC/z+8mlFLTAAAAYElEQVR42m2PWw7AIAgEEdA+l/sft4Km1tj5IUwIsOSwoCJMjaToaIo+o5yGILtRDAElYgBmLm43TIKYKJW9KiF0Ybi2A8BH4CqT8Po7IfMOIZ6vcDw20Pb6S05ruCX+A9I+CQ+hA8ZPAAAAAElFTkSuQmCC" alt="AR" /></a>, Enrico Glaab <a href="https://orcid.org/0000-0003-3977-7469"><img role="img" aria-label="EG" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAALVBMVEUAAACmzjmmzjmmzjmmzjmmzjn////0+ebj8MHe7bXT55y82mus0UWmzjmSwCmNJ4LqAAAABnRSTlMAIGC/z+8mlFLTAAAAYElEQVR42m2PWw7AIAgEEdA+l/sft4Km1tj5IUwIsOSwoCJMjaToaIo+o5yGILtRDAElYgBmLm43TIKYKJW9KiF0Ybi2A8BH4CqT8Po7IfMOIZ6vcDw20Pb6S05ruCX+A9I+CQ+hA8ZPAAAAAElFTkSuQmCC" alt="EG" /></a>, and Mark A. van de Wiel <a href="https://orcid.org/0000-0003-4780-8472"><img role="img" aria-label="MvdW" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAALVBMVEUAAACmzjmmzjmmzjmmzjmmzjn////0+ebj8MHe7bXT55y82mus0UWmzjmSwCmNJ4LqAAAABnRSTlMAIGC/z+8mlFLTAAAAYElEQVR42m2PWw7AIAgEEdA+l/sft4Km1tj5IUwIsOSwoCJMjaToaIo+o5yGILtRDAElYgBmLm43TIKYKJW9KiF0Ybi2A8BH4CqT8Po7IfMOIZ6vcDw20Pb6S05ruCX+A9I+CQ+hA8ZPAAAAAElFTkSuQmCC" alt="MvdW" /></a> (2021). “Predictive and interpretable models via the
+stacked elastic net”. <em>Bioinformatics</em> 37(14):2012-2016. <a href="https://doi.org/10.1093/bioinformatics/btaa535">doi:
+10.1093/bioinformatics/btaa535</a>. (Click <a href="https://orbilu.uni.lu/bitstream/10993/43221/1/starnet.pdf">here</a>
+to access PDF.)</p>
 </div>
 
 

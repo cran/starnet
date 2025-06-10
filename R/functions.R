@@ -64,12 +64,7 @@
 #' @param ...
 #' further arguments passed to \code{\link[glmnet]{glmnet}}
 #' 
-#' @references 
-#' A Rauschenberger, E Glaab, and MA van de Wiel (2021).
-#' "Predictive and interpretable models via the stacked elastic net".
-#' \emph{Bioinformatics}. 37(14):2012-2016.
-#' \doi{10.1093/bioinformatics/btaa535}.
-#' \email{armin.rauschenberger@uni.lu}
+#' @inherit starnet-package references
 #' 
 #' @details
 #' Post hoc feature selection\strong{:} consider
