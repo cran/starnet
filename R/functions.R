@@ -658,11 +658,10 @@ cv.starnet <- function(y,X,family="gaussian",nalpha=21,alpha=NULL,nfolds.ext=10,
   return(list(meta=meta,base=base,extra=extra))
 }
 
-#' @name .simulate
-#' 
+#' @name simulate-internal
 #' @title
 #' Simulation
-#'
+#' 
 #' @description
 #' Functions for simulating data
 #' 
@@ -680,11 +679,21 @@ cv.starnet <- function(y,X,family="gaussian",nalpha=21,alpha=NULL,nfolds.ext=10,
 #' @param family
 #' character \code{"gaussian"}, \code{"binomial"} or \code{"poisson"}
 #' 
+#' @param rho
+#' correlation\strong{:}
+#' numeric between \eqn{0} and \eqn{1}
+#' @param pi
+#' effects\strong{:}
+#' numeric between \eqn{0} (sparse) and \eqn{1} (dense)
+#' 
 #' @return
 #' List of vector \code{y} and matrix \code{X}.
 #' 
 #' @examples
 #' NA
+NULL
+
+#' @rdname simulate-internal
 #' 
 .simulate.block <- function(n,p,mode,family="gaussian"){
   Z <- matrix(data=stats::rnorm(n*3),nrow=n,ncol=3)
@@ -708,13 +717,8 @@ cv.starnet <- function(y,X,family="gaussian",nalpha=21,alpha=NULL,nfolds.ext=10,
   }
   return(list(y=y,X=X))
 }
-#' @rdname .simulate
-#' @param rho
-#' correlation\strong{:}
-#' numeric between \eqn{0} and \eqn{1}
-#' @param pi
-#' effects\strong{:}
-#' numeric between \eqn{0} (sparse) and \eqn{1} (dense)
+
+#' @rdname simulate-internal
 #' 
 .simulate.grid <- function(n,p,rho,pi,family="gaussian"){
   if(!"mvtnorm" %in% .packages(all.available=TRUE)){
@@ -732,7 +736,8 @@ cv.starnet <- function(y,X,family="gaussian",nalpha=21,alpha=NULL,nfolds.ext=10,
   y <- switch(family,gaussian=y,binomial=round(1/(1+exp(-y))),stop("Invalid."))
   return(list(y=y,X=X,beta=beta))
 }
-#' @rdname .simulate
+
+#' @rdname simulate-internal
 #' 
 .simulate.mode <- function(n,p,mode,family="gaussian"){
   if(!"mvtnorm" %in% .packages(all.available=TRUE)){
@@ -1001,10 +1006,12 @@ glmnet.auc <- get("auc",envir=asNamespace("glmnet"))
   constraints <- list(alpha==0,beta>=0,beta<=1,sum(beta)==1)[c(!intercept,lower.limit,upper.limit,unit.sum)]
   # either sum(beta)==1 or sum(beta)<=1
   problem <- CVXR::Problem(objective,constraints=constraints)
-  result <- CVXR::solve(problem)
-
-  alpha <- round(result$getValue(alpha),digits=6)
-  beta <- round(result$getValue(beta),digits=6)
+  #result <- CVXR::solve(problem)
+  #alpha <- round(result$getValue(alpha),digits=6)
+  #beta <- round(result$getValue(beta),digits=6)
+  result <- CVXR::psolve(problem)
+  alpha <- round(x=CVXR::value(alpha),digits=6)
+  beta <- round(x=CVXR::value(beta),digits=6)
   return(list(alpha=alpha,beta=beta))
 }
 
@@ -1065,7 +1072,7 @@ glmnet.auc <- get("auc",envir=asNamespace("glmnet"))
 #fold[y==0] <- rep(1:min(sum(y==0),nfolds),length.out=sum(y==0))
 
 
-### plot matrix
+## plot matrix
 # #x <- matrix(c(-(12:1),1:12),nrow=4,ncol=6)
 # plot.matrix <- function(x,cutoff=0,main="",xlab="col",ylab="row",xscale=NULL,yscale=NULL,xlas=1,ylas=3,...){
 #   
@@ -1123,7 +1130,7 @@ glmnet.auc <- get("auc",envir=asNamespace("glmnet"))
 #   
 # }
 
-### simulate data
+## simulate data
 # .simulate <- function(n,p,rho,pi,family,factor){
 #   if(pi==base::pi){stop("Invalid pi!")}
 #   mu <- rep(x=0,times=p)
@@ -1145,7 +1152,7 @@ glmnet.auc <- get("auc",envir=asNamespace("glmnet"))
 #   return(list)
 # }
 
-### test significant difference
+## test significant difference
 # .test <- function (y,X){
 #   fold <- palasso:::.folds(y=y,nfolds=5)
 #   fold <- ifelse(fold==1,1,0)
