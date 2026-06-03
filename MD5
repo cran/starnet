@@ -1,4 +1,4 @@
-7a37bd0c8d4f243db41429ba12f2ecb8 *DESCRIPTION
+a1e00c798ff69a8e7d1aa7d727442444 *DESCRIPTION
 d5aa8420365a8a936a065cae14f1f3b0 *NAMESPACE
 48d21b8291edc6f5ba312bb32724a584 *NEWS.md
 0af3bfd862e77f3e9d0f291aa474d45e *R/functions.R
@@ -8,13 +8,13 @@ f51ba7c8bc94d8cf1fd072b85c6e53ab *build/partial.rdb
 85ba35a78a52cf7d703e36baf92ef4eb *build/vignette.rds
 41f9539a683f3f1ca9e5f1c22e5f1521 *inst/CITATION
 9c70e4e8ad7723de3d2b3d07fe7782a5 *inst/doc/article.Rmd
-60ffcd4c3eff917924d94f997a7ef069 *inst/doc/article.html
+396c4c94129bb08c3561126174a861ab *inst/doc/article.html
 cb503c978ce271926c778efcb76bae59 *inst/doc/script.R
 a0679ec78c1dc55d1c1bed6a36c4de2d *inst/doc/script.Rmd
-de3505764f93d7f4d74060ee50ec2680 *inst/doc/script.html
+05b59dae296cbe7ac04663f7d7a97eee *inst/doc/script.html
 052960f32a01d28e2e528311c0b5c6a8 *inst/doc/starnet.R
 edfcf1c9b4cb328b9d2704ece06370f4 *inst/doc/starnet.Rmd
-31c1326e5d50e2bce5fa69765df18499 *inst/doc/starnet.html
+e19e8e2aa228702021b36d447bedc53a *inst/doc/starnet.html
 47447cd54e784dea2ad48db698e42bca *man/coef.starnet.Rd
 3494072c4c4c8a4752b253dfd55f256c *man/cv.starnet.Rd
 10acace5f1b5baab99115b85aad2565d *man/dot-cv.glmnet.Rd
@@ -27,7 +27,7 @@ a67537cec6b4bfe0e7aa64b926bd68a9 *man/simulate-internal.Rd
 3a5fe2413867b7b94da980a2ac6bb50e *man/starnet.Rd
 7aedd220016c9d419f8874511d1a160f *man/weights.starnet.Rd
 181eed7fda8dd6174b2a39a23d39eb91 *tests/testthat.R
-42ca25b99c1ebe016afe4f4f4e62b855 *tests/testthat/test.R
+2dff9ba0c351660301b2f9f6079c0804 *tests/testthat/test.R
 9c70e4e8ad7723de3d2b3d07fe7782a5 *vignettes/article.Rmd
 a0679ec78c1dc55d1c1bed6a36c4de2d *vignettes/script.Rmd
 edfcf1c9b4cb328b9d2704ece06370f4 *vignettes/starnet.Rmd
